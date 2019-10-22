@@ -2,6 +2,10 @@ def read(filepath):
   ''' reads an image from given filepath and returns a np.array of pixel values '''
   pass
 
+def write(filepath):
+  ''' writes an np.array of pixel values an an image to given filepath '''
+  pass
+
 def to_grayscale(img):
   ''' converts an rgb image to grayscale '''
   pass
