@@ -18,12 +18,12 @@ def to_grayscale(img):
   ''' converts an rgb image to grayscale '''
   return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-def orb_features(img):
+def orb_features(img, length=300):
   ''' returns the orb features of a grayscale image '''
   points, features = orb.detectAndCompute(img, None)
   # point_feature = sorted(zip(points, features), key=lambda x: x[0].response, reverse=True)
   # points, features = zip(*point_feature)
-  return points[:300], features[:300]
+  return points[:length], features[:length]
 
 
 def match(features1, features2, threshold=0.75):
